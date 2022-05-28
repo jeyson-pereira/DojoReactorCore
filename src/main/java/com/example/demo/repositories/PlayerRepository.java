@@ -1,9 +1,11 @@
 package com.example.demo.repositories;
 
-import com.example.demo.model.Player;
+import com.example.demo.collections.Player;
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
+import org.springframework.stereotype.Repository;
 
-public interface PlayerRepository extends ReactiveMongoRepository<Player, String> {
+@Repository
+public interface PlayerRepository extends ReactiveMongoRepository<Player, Integer> {
 
 }

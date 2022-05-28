@@ -1,6 +1,13 @@
-package com.example.demo.model;
+package com.example.demo.collections;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
+
+@Document(collection = "players")
 public class Player {
+    @Id
+    public Object _id;
     public int id;
     public String name;
     public int age;
